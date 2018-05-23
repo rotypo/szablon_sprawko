@@ -1,0 +1,55 @@
+\documentclass[polish,a4paper,11pt]{mwart}
+
+\usepackage[polish, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\frenchspacing
+
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
+\usepackage{icomma}
+\let\lll\undefined
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{mathtools}
+\usepackage{import}		% wklejanie pdf_tex
+\usepackage{xcolor}		% kolory
+
+% \usepackage[%			% bibliografia
+% style=numeric,
+% sorting=none,
+% language=autobib,
+% autolang=other,
+% backend=biber,
+% ]{biblatex}
+
+
+\title{Tytuł}
+\author{Autor}
+\date{Data}
+
+\begin{document}
+
+	\maketitle
+
+	lub
+
+	\begin{table}[h] %Tabelka
+	\centering
+		\begin{tabular}{ | c |  >{\centering\arraybackslash}m{5.5cm} | c | }
+			\hline
+			\makecell{ \textbf{Wydział:} \\ IMiR \\ \textbf{Rok:}~3 \\ Semestr: 6 } &
+			\textbf{\large{Przedmiot}} &
+			\makecell{Data \\ wykonania \\ ćwiczenia: \\ data} \\ \hline
+			\makecell{\emph{Wykonujący ćw.:} \\ osoba \\ osoba } &
+			\large{Temat} &
+			\makecell{Nr ćwiczenia: \\ 1} \\ \hline
+		\end{tabular}
+	\end{table}
+	
+\end{document}
