@@ -33,6 +33,22 @@ backend=biber,
 
 \addbibresource{bibliografia.bib}
 
+\usepackage{placeins}	% poprawia float
+
+\let\Oldsection\section
+\renewcommand{\section}{\FloatBarrier\Oldsection}
+
+\let\Oldsubsection\subsection
+\renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
+
+\let\Oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
+
+\AtBeginDocument{
+  \renewcommand{\tablename}{Tab.}
+  \renewcommand{\figurename}{Rys.}
+}
+
 \title{Tytuł}
 \author{Autor}
 \date{Data}
@@ -56,6 +72,6 @@ backend=biber,
 		\end{tabular}
 	\end{table}
 
-	\printbibliography
+	\printbibliography[title=Bibliografia]
 	
 \end{document}
