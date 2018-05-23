@@ -20,14 +20,18 @@
 \usepackage{import}		% wklejanie pdf_tex
 \usepackage{xcolor}		% kolory
 
-% \usepackage[%			% bibliografia
-% style=numeric,
-% sorting=none,
-% language=autobib,
-% autolang=other,
-% backend=biber,
-% ]{biblatex}
+\usepackage[%			% bibliografia
+style=numeric,
+sorting=none,
+language=autobib,
+autolang=other,
+backend=biber,
+]{biblatex}
 
+\usepackage{csquotes}
+\DeclareQuoteAlias{croatian}{polish}
+
+\addbibresource{bibliografia.bib}
 
 \title{Tytuł}
 \author{Autor}
@@ -51,5 +55,7 @@
 			\makecell{Nr ćwiczenia: \\ 1} \\ \hline
 		\end{tabular}
 	\end{table}
+
+	\printbibliography
 	
 \end{document}
